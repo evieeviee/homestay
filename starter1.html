@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kota Bayu Villa | Homestay Langkawi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-emerald-600/20">K</div>
+                <span class="font-extrabold text-xl tracking-tight text-stone-900">Kota Bayu <span class="text-emerald-600">Villa</span></span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600">
+                <a href="#overview" class="hover:text-emerald-600 transition-colors">Overview</a>
+                <a href="#amenities" class="hover:text-emerald-600 transition-colors">Amenities</a>
+                <a href="#gallery" class="hover:text-emerald-600 transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+            </nav>
+            <a href="#book" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-md shadow-emerald-600/20">
+                Book Direct & Save
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="overview">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
+                    <span class="text-amber-500">★ 4.98</span> Superhost • Pantai Cenang, Langkawi
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                    Your Cozy Coastal Escape in Langkawi
+                </h1>
+                <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
+                    A charming modern 3-bedroom villa with a private plunge pool, high-speed Wi-Fi, and fully equipped kitchen. Just 5 minutes from Pantai Cenang beach!
+                </p>
+                
+                <!-- Quick Booking Card -->
+                <div class="bg-white p-5 rounded-2xl shadow-xl border border-stone-200/80 space-y-4">
+                    <div class="grid grid-cols-2 gap-3 text-left">
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider">Dates</label>
+                            <span class="text-xs sm:text-sm font-bold text-stone-800">Select Check-in / Out</span>
+                        </div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-200">
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider">Guests</label>
+                            <span class="text-xs sm:text-sm font-bold text-stone-800">4-8 Guests</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/25">
+                        Check Availability (From RM 280/night)
+                    </button>
+                    <p class="text-[11px] text-center text-stone-500">⚡ Best Rate Guaranteed vs Airbnb / Agoda • Zero Booking Fees</p>
+                </div>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="lg:col-span-7">
+                <div class="grid grid-cols-2 gap-3 rounded-3xl overflow-hidden shadow-2xl p-2.5 bg-white border border-stone-200" id="gallery">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Villa Exterior Pool" class="rounded-2xl h-64 sm:h-80 w-full object-cover col-span-2 sm:col-span-1">
+                    <div class="grid grid-rows-2 gap-3 hidden sm:grid">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Living Room" class="rounded-2xl h-36 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Bedroom" class="rounded-2xl h-36 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Grid -->
+    <section class="py-16 bg-white border-y border-stone-200" id="amenities">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">Designed For Comfort & Convenience</h2>
+                <p class="text-stone-500 text-sm mt-2">Everything you need for a relaxing holiday with family or friends.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-4">🏊</div>
+                    <h3 class="font-bold text-stone-900 text-base">Private Dip Pool</h3>
+                    <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">Cleaned daily, fully enclosed for complete family privacy.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-4">📶</div>
+                    <h3 class="font-bold text-stone-900 text-base">500 Mbps High-Speed Wi-Fi</h3>
+                    <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">Ultra-fast connection ready for remote work & 4K streaming.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-4">🍳</div>
+                    <h3 class="font-bold text-stone-900 text-base">Fully Equipped Kitchen</h3>
+                    <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">Microwave, induction stove, cookware, and filter coffee maker.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200/60">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-4">🔑</div>
+                    <h3 class="font-bold text-stone-900 text-base">Smart Self Check-In</h3>
+                    <p class="text-xs text-stone-500 mt-1.5 leading-relaxed">Digital door lock for seamless arrivals at any hour.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Reviews -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="reviews">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">What Our Guests Love</h2>
+            <p class="text-stone-500 text-sm mt-2">Verified reviews from recent stayers in Langkawi</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="text-amber-400 text-sm">★★★★★</div>
+                <p class="text-xs text-stone-600 leading-relaxed">"Super clean and cozy! The kids absolutely loved the pool. It was only a 5-minute drive down to Pantai Cenang for night market food."</p>
+                <div class="flex items-center gap-3 pt-2 border-t border-stone-100">
+                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center">AR</div>
+                    <div>
+                        <div class="text-xs font-bold text-stone-900">Ahmad Razak</div>
+                        <div class="text-[10px] text-stone-400">Kuala Lumpur • Stayed June 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="text-amber-400 text-sm">★★★★★</div>
+                <p class="text-xs text-stone-600 leading-relaxed">"Great Wi-Fi speeds for working remotely. The host was ultra-responsive and gave fantastic local seafood recommendations!"</p>
+                <div class="flex items-center gap-3 pt-2 border-t border-stone-100">
+                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center">SM</div>
+                    <div>
+                        <div class="text-xs font-bold text-stone-900">Sarah Miller</div>
+                        <div class="text-[10px] text-stone-400">Singapore • Stayed May 2026</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+                <div class="text-amber-400 text-sm">★★★★★</div>
+                <p class="text-xs text-stone-600 leading-relaxed">"Booking directly saved us over RM 150 compared to Airbnb. Seamless check-in process and beautiful modern decor inside."</p>
+                <div class="flex items-center gap-3 pt-2 border-t border-stone-100">
+                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center">JT</div>
+                    <div>
+                        <div class="text-xs font-bold text-stone-900">Jason Tan</div>
+                        <div class="text-[10px] text-stone-400">Penang • Stayed April 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-10 border-t border-stone-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="font-bold text-stone-200 text-sm">Kota Bayu Homestay Langkawi</p>
+            <p class="text-stone-500">Jalan Pantai Cenang, 07000 Langkawi, Kedah, Malaysia</p>
+            <p class="text-stone-600">All prices displayed in Malaysian Ringgit (MYR). Direct booking rate guarantees the lowest available price.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
