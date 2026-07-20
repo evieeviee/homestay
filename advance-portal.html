@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ASTOR PALACE | Multi-Tab Hospitality Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-100 antialiased selection:bg-amber-500 selection:text-stone-950">
+
+    <!-- Top Navigation with Portal Switcher -->
+    <header class="border-b border-stone-800/80 bg-stone-950/90 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full border border-amber-400/50 flex items-center justify-center text-amber-300 font-cinzel text-sm">A</div>
+                <div class="font-cinzel text-lg tracking-widest text-stone-100 uppercase">
+                    The Astor <span class="text-amber-400 text-xs block font-sans tracking-widest">Desa ParkCity • KL</span>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE MULTI-PAGE TABS -->
+            <nav class="hidden md:flex bg-stone-900/80 p-1.5 rounded-full border border-stone-800 text-xs">
+                <button onclick="switchTab('overview')" id="tab-overview" class="tab-btn px-5 py-2 rounded-full font-medium transition-all text-amber-300 bg-stone-800 shadow-sm">
+                    01. Overview
+                </button>
+                <button onclick="switchTab('residences')" id="tab-residences" class="tab-btn px-5 py-2 rounded-full font-medium transition-all text-stone-400 hover:text-stone-200">
+                    02. Suites & Villas
+                </button>
+                <button onclick="switchTab('dining')" id="tab-dining" class="tab-btn px-5 py-2 rounded-full font-medium transition-all text-stone-400 hover:text-stone-200">
+                    03. In-House Dining
+                </button>
+                <button onclick="switchTab('concierge')" id="tab-concierge" class="tab-btn px-5 py-2 rounded-full font-medium transition-all text-stone-400 hover:text-stone-200">
+                    04. Reserve Portal
+                </button>
+            </nav>
+
+            <button onclick="switchTab('concierge')" class="bg-amber-400 text-stone-950 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-amber-300 transition-all">
+                Direct Reserve
+            </button>
+        </div>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- TAB 1: OVERVIEW PAGE                                              -->
+    <!-- ================================================================= -->
+    <div id="content-overview" class="tab-content active">
+        <!-- Hero Banner -->
+        <section class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80" alt="Penthouse Architecture" class="absolute inset-0 w-full h-full object-cover opacity-35 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent"></div>
+
+            <div class="relative z-10 max-w-4xl text-center space-y-6">
+                <span class="text-xs uppercase tracking-[0.4em] text-amber-400/90 font-medium border-b border-amber-400/30 pb-2 inline-block">
+                    Exclusive Urban Estate • Kuala Lumpur
+                </span>
+                <h1 class="font-cinzel text-5xl sm:text-7xl text-amber-50 leading-tight">
+                    Refined Sanctuary <br><span class="italic text-amber-200/90">For Private Stays</span>
+                </h1>
+                <p class="text-xs sm:text-sm text-stone-400 max-w-xl mx-auto font-light leading-relaxed tracking-wider">
+                    An architectural residence offering private saltwater infinity pool, direct private lift entry, and full-service butler staff.
+                </p>
+                <div class="pt-4 flex justify-center gap-4">
+                    <button onclick="switchTab('residences')" class="bg-amber-400 text-stone-950 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-300 transition-all">
+                        Explore Suites
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="border-y border-stone-800 bg-stone-900/40 py-8">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="font-cinzel text-2xl text-amber-300">5,200 SQ FT</div>
+                    <div class="text-[10px] uppercase text-stone-500 tracking-widest mt-1">Living Space</div>
+                </div>
+                <div>
+                    <div class="font-cinzel text-2xl text-amber-300">4 SUITES</div>
+                    <div class="text-[10px] uppercase text-stone-500 tracking-widest mt-1">Accommodates 10</div>
+                </div>
+                <div>
+                    <div class="font-cinzel text-2xl text-amber-300">24/7 BUTLER</div>
+                    <div class="text-[10px] uppercase text-stone-500 tracking-widest mt-1">Personal Concierge</div>
+                </div>
+                <div>
+                    <div class="font-cinzel text-2xl text-amber-300">MYR 4,200</div>
+                    <div class="text-[10px] uppercase text-stone-500 tracking-widest mt-1">Starting Nightly Rate</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- TAB 2: SUITES & VILLAS PAGE                                       -->
+    <!-- ================================================================= -->
+    <div id="content-residences" class="tab-content">
+        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-3">
+                <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Accommodations</span>
+                <h2 class="font-cinzel text-4xl text-stone-100">The Private Suites</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Suite 1 -->
+                <div class="bg-stone-900/50 border border-stone-800 rounded-3xl overflow-hidden space-y-6 p-6">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80" alt="Master Suite" class="rounded-2xl h-64 w-full object-cover">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-cinzel text-2xl text-amber-200">Royal Astor Master Suite</h3>
+                            <span class="text-xs text-amber-400 font-bold">1,800 sq ft</span>
+                        </div>
+                        <p class="text-xs text-stone-400 leading-relaxed font-light">Features a king-size bespoke bed, marble en-suite bath with freestanding soaking tub, walk-in dressing room, and private terrace access.</p>
+                        <div class="pt-2 text-[11px] text-stone-500 flex gap-4 border-t border-stone-800">
+                            <span>• King Bed</span>
+                            <span>• City Skyline View</span>
+                            <span>• Marble Bath</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite 2 -->
+                <div class="bg-stone-900/50 border border-stone-800 rounded-3xl overflow-hidden space-y-6 p-6">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Garden Suite" class="rounded-2xl h-64 w-full object-cover">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-cinzel text-2xl text-amber-200">Zen Pavilion Suite</h3>
+                            <span class="text-xs text-amber-400 font-bold">1,200 sq ft</span>
+                        </div>
+                        <p class="text-xs text-stone-400 leading-relaxed font-light">Overlooking the private bamboo courtyard, equipped with an outdoor rainfall shower and dedicated meditation lounge area.</p>
+                        <div class="pt-2 text-[11px] text-stone-500 flex gap-4 border-t border-stone-800">
+                            <span>• Queen Bed</span>
+                            <span>• Courtyard View</span>
+                            <span>• Rain Shower</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- TAB 3: IN-HOUSE DINING PAGE                                       -->
+    <!-- ================================================================= -->
+    <div id="content-dining" class="tab-content">
+        <section class="max-w-6xl mx-auto px-6 py-16 space-y-12">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Private Gastronomy</span>
+                    <h2 class="font-cinzel text-4xl text-stone-100">In-Villa Private Chef Service</h2>
+                    <p class="text-xs text-stone-400 leading-relaxed font-light">
+                        Our resident culinary team prepares bespoke 5-course dinners tailored to your taste. From modern Malay multi-course tasting menus to omakase sushi experiences.
+                    </p>
+                    <ul class="text-xs space-y-3 text-stone-300">
+                        <li class="flex items-center gap-2">✦ <span><strong>Sommelier Wine Pairings:</strong> Rare vintages available upon request</span></li>
+                        <li class="flex items-center gap-2">✦ <span><strong>Daily Breakfast Service:</strong> Served poolside at your preferred hour</span></li>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1000&q=80" alt="Dining" class="rounded-3xl border border-stone-800 shadow-2xl">
+            </div>
+        </section>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- TAB 4: RESERVATION PORTAL PAGE                                   -->
+    <!-- ================================================================= -->
+    <div id="content-concierge" class="tab-content">
+        <section class="max-w-3xl mx-auto px-6 py-16">
+            <div class="bg-stone-900 border border-stone-800 rounded-3xl p-8 sm:p-12 space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="text-xs uppercase tracking-[0.3em] text-amber-400">Direct Reservation</span>
+                    <h2 class="font-cinzel text-3xl text-stone-100">Request Private Stay</h2>
+                    <p class="text-xs text-stone-400">All direct reservations include complimentary airport limo transfer & daily breakfast.</p>
+                </div>
+
+                <form class="space-y-4 text-xs">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-stone-400 uppercase tracking-wider text-[10px] mb-2">Check-In Date</label>
+                            <input type="date" class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div>
+                            <label class="block text-stone-400 uppercase tracking-wider text-[10px] mb-2">Check-Out Date</label>
+                            <input type="date" class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-400">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-stone-400 uppercase tracking-wider text-[10px] mb-2">Guest Count</label>
+                        <select class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-400">
+                            <option>1-4 Guests (Standard)</option>
+                            <option>5-8 Guests (Full Residence)</option>
+                            <option>Private Event / Gathering (Inquire)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-stone-400 uppercase tracking-wider text-[10px] mb-2">Full Name</label>
+                        <input type="text" placeholder="e.g. Tan Sri / Dato' / Mr." class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-stone-200 focus:outline-none focus:border-amber-400">
+                    </div>
+
+                    <button type="button" class="w-full bg-amber-400 hover:bg-amber-300 text-stone-950 py-4 rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-xl shadow-amber-400/10">
+                        Submit Reservation Request (MYR 4,200 / Night)
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-stone-900 text-center text-xs text-stone-600">
+        <p>© 2026 The Astor Residence KL • All rights reserved</p>
+    </footer>
+
+    <!-- Tab Switching Script -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Reset all tab button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.className = "tab-btn px-5 py-2 rounded-full font-medium transition-all text-stone-400 hover:text-stone-200";
+            });
+
+            // Show selected tab content
+            document.getElementById('content-' + tabId).classList.add('active');
+
+            // Highlight selected tab button
+            const activeBtn = document.getElementById('tab-' + tabId);
+            if (activeBtn) {
+                activeBtn.className = "tab-btn px-5 py-2 rounded-full font-medium transition-all text-amber-300 bg-stone-800 shadow-sm";
+            }
+        }
+    </script>
+</body>
+</html>
